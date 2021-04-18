@@ -1,0 +1,262 @@
+.manu {
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  width: 96%;
+  /*flex-direction: row;*/
+  text-align: center;
+  font-size: 14px;
+  background-color: #FFF;
+  /* padding: 20rpx 20rpx 20rpx 20rpx; */
+  margin: 0 auto;
+  white-space: nowrap;
+  /* margin-bottom: 20rpx; */
+}
+
+.tab {
+  /*width: 50%;*/
+  display: inline-block;
+  padding: 15rpx 24rpx;
+  margin: 0 10rpx 0 10rpx;
+  border-radius: 10rpx;
+}
+
+.tabBorer {
+  color: #1589eb;
+  background-color: #EDEDED;
+}
+
+.item {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #FFFF;
+  flex-direction: row;
+  padding-top: 20rpx;
+}
+
+.item_hidden {
+  display: none;
+}
+
+.item_type {
+  width: 20%;
+  border: 2rpx solid #EDEDED;
+  padding: 20rpx 20rpx;
+  text-align: center;
+  background-color: #FFFF;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item_emphasize {
+  color: #1589eb;
+}
+
+.item_name {
+  width: 75%;
+  border: 2rpx solid #EDEDED;
+  padding: 20rpx 20rpx;
+  background-color: #FFFF;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.bnt_hover {
+  background-color: #f5f5f5;
+  box-shadow:0rpx 0rpx 10rpx;
+  transition: all 0.1s ease-in-out;
+}
+
+.item_btn {
+  width: 100%;
+  background-color: #FFFF;
+  padding: 28rpx 28rpx;
+  flex-direction: row;
+  display: flex;
+  font-size: 14px;
+  margin-top: 4rpx;
+}
+
+.saveTime {
+  font-size: 12px;
+  color: gray;
+}
+
+.img_icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.arrow {
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  position: absolute;
+  right: 30rpx;
+  transform: rotate(45deg);
+  margin-top: 10rpx;
+}
+
+
+.arrow_rotate {
+  transform: rotate(135deg);
+}
+
+/**用户信息样式**/
+.info-container{
+  margin-top: 20rpx;
+  background-color:rgb(237, 237, 237);
+  height: 100%;
+}
+
+.item-info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item-info-view {
+  text-align: center;
+  padding: 12rpx 12rpx 12rpx 12rpx;
+  /* background-color: red; */
+}
+.item-info-view text {
+  text-align: center;
+  display: block;
+}
+.info-view-name {
+  color: gray;
+  font-size: 12px;
+}
+
+.info-view-text {
+  font-size: 14px;
+  /* color: red; */
+}
+
+
+.page-body-setting-item {
+  /* width: 100%; */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1rpx solid #FFF;
+  margin: 20rpx 16rpx 20rpx 16rpx;
+  animation: viewlinear 2s linear infinite;
+  /* opacity: 0.9; */
+}
+.own-info-item{
+ width: 100%;
+ display: block;
+ justify-content: space-around;
+ text-align: justify;
+}
+.info-name{
+ 
+ font-size: 14px;
+ /* background-color: #FEF; */
+ color: black;
+ text-align: left;
+ border-bottom: 1rpx dashed darkgray;
+ padding: 12rpx 12rpx 12rpx 12rpx;
+}
+
+.info-name text {
+  font-size: 12px;
+  color: gray;
+  /* padding: 24rpx 12rpx 24rpx 12rpx; */
+}
+
+.info-text{
+  /* height: 120px; */
+  text-align: left;
+  font-size: 14px;
+  color: black;
+  padding: 12rpx 12rpx 12rpx 12rpx;
+  border-top:  1rpx dashed darkgray;
+  /* background-color: green; */
+}
+
+.text_container {
+  width: 100%;
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.text_left {
+  text-align: left;
+  width: 50%;
+  color: red;
+}
+
+.text_right {
+  text-align: right;
+  width: 50%;
+  color: gray;
+}
+
+.info-text text {
+  /* background-color: darkmagenta; */
+  display: inline-block; 
+}
+
+.input-text{
+  width: 100%;
+  /* background-color: yellow; */
+}
+.button{
+  background-color:#3197ed;
+  color: #FFF;
+  padding: 10px;
+  margin: 12rpx 12rpx 12rpx 12rpx;
+}
+.button-hover {
+ background-color: green;
+}
+
+.check_box {
+  margin: 12rpx 12rpx 12rpx 12rpx;
+  font-size: 14px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check_box_1 {
+  width: 50%;
+}
+
+radio .wx-radio-input{
+    border-radius: 50%;/* 圆角 */
+    width: 30rpx; /* 背景的宽 */
+    height: 30rpx; /* 背景的高 */
+    background-color: #FFF;
+    border: 1rpx solid gray;
+  }
+  
+  /* 选中后的 背景样式*/
+  radio .wx-radio-input.wx-radio-input-checked{
+    border: 1rpx solid gray;
+    background: #3197ed;
+  }
+  
+  radio .wx-radio-input.wx-radio-input-checked::before{
+  border-radius: 50%;
+  width: 30rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 30rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 28rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+  }
+  

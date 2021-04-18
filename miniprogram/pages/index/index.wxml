@@ -1,0 +1,48 @@
+<view class="container">
+	<view class="head">
+		<image src="../../image/jidianxia.png"></image>
+		<view class="head_text">
+			<text class="head_title">稷下微助手</text>
+			<text class="head_title_2">分享所得，美美与共</text>
+		</view>
+	</view>
+
+	<!-- <navigator url="/pages/download/download" open-type="switchTab">
+		<button class="tab" hover-class="bnt_hover">
+			<text>资源大全</text>
+			<view class='arrow'></view>
+		</button>
+
+	</navigator>
+	<navigator url="/pages/temp/temp" open-type="switchTab">
+		<button class="tab" hover-class="bnt_hover">
+
+			<text>临时链接</text>
+			<view class='arrow'></view>
+		</button>
+	</navigator>
+
+	<navigator url="/pages/setting/setting" open-type="switchTab">
+		<button class="tab" hover-class="bnt_hover">
+
+			<text>公告通知</text>
+			<view class='arrow'></view>
+		</button>
+	</navigator> -->
+
+	<!-- <button class="tab" bind:tap="bindViewTap" hover-class="bnt_hover">
+		<text>论文笔记</text>
+		<view class='arrow'></view>
+	</button> -->
+
+	
+
+	<button class="tab" hover-class="bnt_hover"  open-type="getUserInfo" 
+	data-url=""
+	bindgetuserinfo="bindGetUserInfo_report">
+			<text>VR 715 周报提交平台</text>
+			<view class='arrow'></view>
+	</button>
+
+</view>
+

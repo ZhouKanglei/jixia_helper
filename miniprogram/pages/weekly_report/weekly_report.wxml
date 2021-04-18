@@ -1,0 +1,114 @@
+
+
+<!--主容器-->
+<view class="info-container page-body">
+  
+  <form bindsubmit="submitData" report-submit="true">
+    <view class="page-body-setting-item">
+      <view class="item-info-box">
+        <view class="item-info-view">
+          <text class="info-view-name">姓名</text>
+          <text class="info-view-text">{{name}}</text>
+        </view>
+        <view class="item-info-view" bindtap="prevWeek">
+          <text class="info-view-name">(上) 周一</text>
+          <text class="info-view-text">{{startDate}}</text>
+        </view>
+        <view class="item-info-view" bindtap="nextWeek">
+          <text class="info-view-name">周日 (下)</text>
+          <text class="info-view-text">{{endDate}}</text>
+        </view>
+      </view>
+    </view>
+
+    <block wx:for="{{items}}" wx:for-item="item" wx:key='index'>
+      <view class="page-body-setting-item">
+        <view class="own-info-item">
+          <view class="info-name"> {{index + 1}}.{{item.title}} <text> ({{item.note}}) </text> </view>
+
+          <block wx:if="{{item.title == '周度计划'}}">
+            <block wx:for="{{month}}" wx:for-item="week" wx:for-index="week_idx">
+              <view class="info-text">
+                <text>{{week}}</text>
+                <textarea name='content' 
+                class='input-text input-plan' 
+                bindinput="bindText"  
+                maxlength='{{item.size}}'
+                data-index='{{index}}'
+                data-week="{{week_idx}}"
+                placeholder='{{item.example}}' 
+                placeholder-class='sug_p'
+                value="{{content_default[item.title][week]}}">
+                </textarea>
+                <view class="text_container">
+                  <text class="text_left">{{empty_date[week_idx]}}</text>
+                  <text class="text_right">{{len_date[week_idx]}}/{{item.size}}</text>
+                </view>
+              </view>
+            </block>
+          </block>
+
+          <block wx:if="{{item.title != '周度计划'}}">
+
+            <radio-group bindchange="checkboxChange" class='check_box' data-index='{{index}}'>
+              <radio value='paper_reading' checked="{{item.flag == true ? true : false}}" class="check_box_1">有</radio>
+              <radio value='paper_none' checked="{{item.flag == false ? true : false}}" class="check_box_2">无</radio>
+            </radio-group>
+
+            <view wx:if="{{item.flag == true}}">
+              <view class="info-text">
+                <textarea name='content' 
+                class='input-text' 
+                bindinput="bindText"  
+                maxlength='{{item.size}}'
+                data-index='{{index}}'
+                  placeholder='{{item.example}}' placeholder-class='sug_p'
+                  value="{{content_default[item.title]}}">
+                </textarea>
+                <view class="text_container">
+                  <text class="text_left">{{empty[index]}}</text>
+                  <text class="text_right">{{len[index]}}/200</text>
+                </view>
+              </view>
+            </view>
+
+          </block>
+        </view>
+      </view>
+    </block>
+
+
+    <!-- <view class="page-body-setting-item">
+      <view class="own-info-item">
+        <view class="info-name"> 1. 论文工作 <text> (本周是否阅读论文) </text> </view>
+
+        <radio-group bindchange="checkboxChange" class='check_box'>
+          <radio value='paper_reading' class="check_box_1">有</radio>
+          <radio value='paper_none' checked="True" class="check_box_2">无</radio>
+        </radio-group>
+
+        <view wx:if="{{paper == 'paper_reading'}}">
+          <view class="info-text">
+            <textarea name='paper_content' class='input-text' bindinput="bindText" maxlength='200'
+              placeholder='简述本周论文阅读情况。例如，本周阅读自适应时空图网络文章，发表于2019年CVPR。其中，我对自适应图卷积很感兴趣，……' placeholder-class='sug_p'>
+      </textarea>
+            <text>{{t_length}}/200</text>
+          </view>
+        </view>
+      </view>
+
+
+    </view> -->
+
+
+    <view wx:if="{{default == false}}">
+      <button class="button" form-type="submit">提交周报</button>
+    </view>
+
+    <view wx:if="{{default == true}}">
+      <button class="button red_button" form-type="submit">修改周报</button>
+    </view>
+
+
+  </form>
+</view>

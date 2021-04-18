@@ -1,0 +1,38 @@
+<view class="container">
+	<view class="head">
+		<image src="{{userInfo.avatarUrl}}"></image>
+		<view class="head_text">
+			<text class="head_title">{{member.name}}</text>
+			<text class="head_title_2">{{member.name + ' ' + member.group + ' ' + member.role}}</text>
+		</view>
+	</view>
+
+	<button class="tab" hover-class="bnt_hover" bindtap="subscribe_template">
+		<text>周报提醒</text>
+		<view class='arrow'></view>
+	</button>
+
+	<button wx:if="{{member.role != '老师'}}" class="tab" hover-class="bnt_hover" bindtap="submit_weekly_report">
+		<text>提交周报</text>
+		<view class='arrow'></view>
+	</button>
+
+
+	<button wx:if="{{member.role != '老师'}}" class="tab" hover-class="bnt_hover" bindtap="search_personal_report">
+		<text>个人查询</text>
+		<view class='arrow'></view>
+	</button>
+
+	<button wx:if="{{member.role != '组员'}}" class="tab" hover-class="bnt_hover" bindtap="search_global_report">
+		<text wx:if="{{member.role == '老师'}}">本周周报</text>
+		<text wx:if="{{member.role == '组长'}}">小组周报</text>
+		<view class='arrow'></view>
+	</button>
+
+	<button wx:if="{{member.role != '组员'}}" class="tab" hover-class="bnt_hover" bindtap="urge_member_submit">
+		<text wx:if="{{member.role == '老师'}}">催交组员</text>
+		<text wx:if="{{member.role == '组长'}}">催交周报</text>
+		<view class='arrow'></view>
+	</button>
+
+</view>

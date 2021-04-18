@@ -1,0 +1,50 @@
+<!--主容器-->
+<view  wx:if="role != '成员'" class="info-container page-body">
+  <form bindsubmit="submitData" report-submit="true">
+    <view class="page-body-setting-item">
+      <view class="item-info-box">
+        <view class="item-info-view">
+          <text class="info-view-name">视图</text>
+          <text class="info-view-text">{{role}}</text>
+        </view>
+        <view class="item-info-view" bindtap="prevWeek">
+          <text class="info-view-name">(上) 周一</text>
+          <text class="info-view-text">{{startDate}}</text>
+        </view>
+        <view class="item-info-view" bindtap="nextWeek">
+          <text class="info-view-name">周日 (下)</text>
+          <text class="info-view-text">{{endDate}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-body-setting-item">
+    <scroll-view scroll-x class="manu">
+      <block wx:for="{{group}}" wx:key="index">
+        <view class='tab {{currentGroup == item ? "tabBorer" : ""}}' data-group = "{{item}}" bindtap="checkCurrent" hover-class="bnt_hover"> {{item}} </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="page-body-setting-item">
+    <block wx:for="{{data}}" wx-key='index' wx:if="{{(item.group == currentGroup || currentGroup == '全部') && item.submit && item.group != undefined}}">
+      <view class="item_btn" data-stu="{{item.name}}" bindtap="goto_stu_view">
+			<text>{{item.name}} <text class="saveTime">{{item.saveTime}}</text>  </text>
+			<view class='arrow'></view>
+		</view>
+    </block>
+  </view>
+
+  <!-- 未提交 -->
+  <view class="page-body-setting-item">
+    <block wx:for="{{data}}" wx-key='index' wx:if="{{(item.group == currentGroup || currentGroup == '全部') && item.submit == undefined && item.group != undefined}}">
+      <view class="item_btn" data-stu="{{item.name}}" bindtap="goto_stu_view">
+			<text>{{item.name}} <text class="saveTime">{{'未提交'}}</text>  </text>
+			<view class='arrow'></view>
+		</view>
+    </block>
+  </view>
+  
+
+  </form>
+</view>

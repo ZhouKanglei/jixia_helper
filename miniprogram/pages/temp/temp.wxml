@@ -1,0 +1,27 @@
+<view class="container">
+	<scroll-view scroll-x class="manu">
+		<block wx:for="{{list_manus}}" wx:key="index">
+			<view class='tab {{currentData == index ? "tabBorer" : ""}}' data-current = "{{index}}" bindtap="checkCurrent" hover-class="bnt_hover"> {{item}} </view>
+		</block>
+	</scroll-view>
+
+  	<block wx:for="{{list_subs[currentData]}}" wx:for-item="subject" wx:key="idx">
+		<view class="item_btn" bindtap="itemDisplay" data-subject="{{subject}}">
+			<text>{{subject}}</text>
+			<view class='arrow {{currentSub == subject && !hidden ? "arrow_rotate" : ""}}'></view>
+		</view>
+
+	  	<block wx:for="{{list_data}}" wx:for-item="item" wx:key="index">
+	  		<view wx:if='{{item.subject == subject && item.type == list_manus[currentData]}}'>
+	  			<view class='item {{currentSub == subject && !hidden ? "" : "item_hidden"}}'>		
+	  				<view class='item_type {{item.article == "null" ? "" : "item_emphasize"}}' bindtap='{{item.article == "null" ? "" : "bindViewTap"}}' data-article="{{item.article}}" hover-class='{{item.article == "null" ? "" : "bnt_hover"}}'>  
+		      			{{item.class}}
+		      		</view>
+		      		<view class="item_name" bindtap="copy" data-link="{{item.link}}" hover-class="bnt_hover"> {{item.name}} </view>
+		    	</view>
+	  		 </view>
+	  	</block>
+  	</block>
+</view>
+
+ 

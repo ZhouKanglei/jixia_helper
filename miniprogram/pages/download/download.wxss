@@ -1,0 +1,101 @@
+.manu {
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  width: 96%;
+  /*flex-direction: row;*/
+  text-align: center;
+  background-color: #FFF;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  margin: 0 auto;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+
+.tab {
+  /*width: 50%;*/
+  display: inline-block;
+  padding: 15rpx 24rpx;
+  margin: 0 10rpx 0 10rpx;
+  border-radius: 10rpx;
+}
+
+.tabBorer {
+  color: #1589eb;
+  background-color: #EDEDED;
+}
+
+.item {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #FFFF;
+  flex-direction: row;
+  padding-top: 20rpx;
+}
+
+.item_hidden {
+  display: none;
+}
+
+.item_type {
+  width: 20%;
+  border: 2rpx solid #EDEDED;
+  padding: 20rpx 20rpx;
+  text-align: center;
+  background-color: #FFFF;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item_emphasize {
+  color: #1589eb;
+}
+
+.item_name {
+  width: 75%;
+  border: 2rpx solid #EDEDED;
+  padding: 20rpx 20rpx;
+  background-color: #FFFF;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.bnt_hover {
+  background-color: #f5f5f5;
+  box-shadow:0rpx 0rpx 10rpx;
+  transition: all 0.1s ease-in-out;
+}
+
+.item_btn {
+  width: 100%;
+  background-color: #FFFF;
+  padding: 28rpx 28rpx;
+  flex-direction: row;
+  display: flex;
+  margin-top: 4rpx;
+}
+
+.img_icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.arrow {
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  position: absolute;
+  right: 30rpx;
+  transform: rotate(45deg);
+  margin-top: 10rpx;
+}
+
+
+.arrow_rotate {
+  transform: rotate(135deg);
+}

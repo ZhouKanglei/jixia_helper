@@ -1,0 +1,55 @@
+<!--主容器-->
+<view  wx:if="{{true}}" class="info-container page-body">
+  <form bindsubmit="submitData" report-submit="true">
+    <view class="page-body-setting-item">
+      
+      <view class="item-info-box">
+        <navigator url="../global_view/global_view">
+        <view class="item-info-view">
+          <text class="info-view-name">姓名</text>
+          <text class="info-view-text">{{name}}</text>
+        </view>
+      </navigator>
+        <view class="item-info-view" bindtap="prevWeek">
+          <text class="info-view-name">(上) 周一</text>
+          <text class="info-view-text">{{startDate}}</text>
+        </view>
+        <view class="item-info-view" bindtap="nextWeek">
+          <text class="info-view-name">周日 (下)</text>
+          <text class="info-view-text">{{endDate}}</text>
+        </view>
+      </view>
+    </view>
+
+    <block wx:if="{{flag == true}}" wx:for="{{title}}" wx:for-item="item" wx:key='index'>
+      <view class="page-body-setting-item">
+        <view class="own-info-item">
+          <view class="info-name"> {{index + 1}}.{{item}} <text>({{note[index]}})</text> </view>
+          <block wx:if="{{item == '周度计划'}}">
+            <block wx:for="{{content[item]}}" wx:for-item="week" wx:for-index="week_idx">
+              <view class="info-text">
+                <text>{{week_idx}}</text>
+                {{week}}
+              </view>
+            </block>
+          </block>
+
+          <block wx:if="{{item != '周度计划'}}">
+              <view  class="info-text">
+                  {{content[item]}}
+              </view>
+          </block>
+        </view>
+      </view>
+    </block>
+    
+    <view wx:if="{{flag == true}}">
+      <button class="button" form-type="submit" disabled="true">待评价</button>
+    </view>
+
+    <view wx:if="{{flag == false}}">
+      <button class="button" form-type="submit" disabled="true"> 没有内容 </button>
+    </view>
+
+  </form>
+</view>

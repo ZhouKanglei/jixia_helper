@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/weixinlink/weixinlink",
+    "pages/download/download",
+    "pages/temp/temp",
+    "pages/setting/setting",
+    "pages/weekly_report/weekly_report",
+    "pages/stu_view/stu_view",
+    "pages/global_view/global_view",
+    "pages/report/report",
+    "pages/subcribe_timer/subcribe_timer"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3197ed",
+    "navigationBarTitleText": "稷下微助手",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3197ed",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/index_0.png",
+        "selectedIconPath": "image/index.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/download/download",
+        "iconPath": "image/download_0.png",
+        "selectedIconPath": "image/download.png",
+        "text": "下载"
+      },
+      {
+        "pagePath": "pages/temp/temp",
+        "iconPath": "image/temp_0.png",
+        "selectedIconPath": "image/temp.png",
+        "text": "会员"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "iconPath": "image/setting_0.png",
+        "selectedIconPath": "image/setting.png",
+        "text": "设置"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

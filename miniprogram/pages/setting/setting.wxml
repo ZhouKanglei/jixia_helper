@@ -1,0 +1,21 @@
+<view class="container">
+	<view wx:for="{{notice}}" wx:key="item" wx:for-index="index">
+		<view class="tab" bindtap="itemDisplay" data-time="{{item.time}}" hover-class="bnt_hover">
+			<text>#{{notice.length - index}}「{{item.type}}」{{item.name}}</text>
+			<view class='arrow {{item.time != current ? "" : "arrow_rotate"}}'></view>
+		</view>
+		<view class='tab_content {{item.time != current ? "item_hidden" : ""}}'>
+			<view class="tab_paragraph">
+				<view class="notice_title">{{item.name}}</view>
+				<view class="line"></view>
+				<view class="notice_content">{{item.content}}</view>
+			</view>
+			<view class="tab_date">
+				{{time_}}
+			</view>
+		</view>
+	</view>
+	<view class="adContainer">
+  	<ad unit-id="adunit-25c9e9a94a0dc5f7" ad-intervals="30"></ad>
+	</view>
+</view>

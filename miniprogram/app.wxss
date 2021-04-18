@@ -1,0 +1,93 @@
+view,
+sroll-view,
+swiper,
+icon,
+text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+input,
+picker,
+radio,
+slider,
+switch,
+action-sheet,
+modal,
+toast,
+loading,
+navigator,
+audio,
+image,
+video,
+map,
+canvas {
+  box-sizing: border-box;
+}
+page {
+  height: 100%;
+}
+
+.hide {
+  display: none!important;
+}
+
+.container,
+input,
+button {
+  font: 14px "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+
+.container {
+  height: 100%;
+  padding: 10rpx 10rpx;
+  background-color: #EDEDED;
+}
+
+.panel {
+  background: #FFFF;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+.nodata{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.nodata_img{
+	display: block;
+	width: 45px;
+	height: 45px;
+}
+
+.nodata_text{
+	color:#dedede;
+	font-size: 12px;
+	padding-left: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 6rpx;
+  height: 6rpx;
+  color: #FFFF;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10rpx #FFFF;
+  box-shadow: inset 0 0 6rpx #FFFF;
+  border-radius: 10rpx;
+  background-color: #FFFF;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10rpx;
+  -webkit-box-shadow: inset 0 0 10rpx #FFFF;
+  box-shadow: inset 0 0 6rpx #FFFF;
+  background-color: #3197ED;
+}
